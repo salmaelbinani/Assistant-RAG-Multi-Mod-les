@@ -70,10 +70,8 @@ Voici quelques captures d'écran pour illustrer le fonctionnement de l'applicati
 
 
 ![Chargement des Documents](images/image_1.jpg)
-
-### Interaction avec l'Assistant
-
-![Interaction avec l'Assistant](path/to/chat_screenshot.png)
+![Chargement des Documents](images/image_2.jpg)
+![Chargement des Documents](images/image_3.jpg)
 
 ## Contribuer
 
