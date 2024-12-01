@@ -1,84 +1,94 @@
-# Assistant-RAG-Multi-Mod-les
-💬 Multi-Model RAG Assistant
-This repository contains a Streamlit-based web application that serves as a Retrieval-Augmented Generation (RAG) assistant, allowing you to interact with multiple LLM models while leveraging relevant documents for accurate responses.
+# Assistant RAG Multi-Modèles
 
-The assistant supports dynamic model selection, multi-document uploads (PDF, TXT, DOCX), and retrieval-based conversational memory for contextual interactions.
+Ce projet est une application Streamlit pour un assistant de récupération de documents (RAG) multi-modèles utilisant des modèles de langage avancés. L'application permet de charger, traiter et interroger des documents en utilisant différents modèles de langage.
 
-Features
-🔍 Retrieve Relevant Documents: Processes and indexes uploaded documents for question answering.
-🧠 Conversation Memory: Keeps track of conversation history for a coherent dialogue.
-⚙ Multi-Model Support: Switch between various LLMs like Llama3.1, Mistral, Gemma, and others.
-📂 Document Formats Supported: PDF, TXT, DOCX.
-🎯 Adjustable Relevance Threshold: Customize how strictly the assistant matches your query to document content.
-📥 Installation
-Prerequisites
-Ensure you have the following installed:
+## Fonctionnalités
 
-Python 3.8+
-pip (Python package manager)
-Steps
-Clone this repository:
+- **Chargement de documents** : Supporte les fichiers PDF, TXT et DOCX.
+- **Traitement des documents** : Utilise des loaders spécifiques pour chaque type de fichier.
+- **Vectorisation des documents** : Utilise Chroma pour créer un vectorstore persistant.
+- **Recherche et récupération** : Utilise des chaînes de récupération conversationnelle pour interroger les documents.
+- **Interface utilisateur** : Interface intuitive avec Streamlit pour configurer et interagir avec l'assistant.
 
-bash
-Copy code
-git clone https://github.com/your-username/multi-model-rag-assistant.git  
-cd multi-model-rag-assistant  
-Create and activate a virtual environment:
+## Installation
 
-bash
-Copy code
-python -m venv venv  
-source venv/bin/activate  # On Windows: venv\Scripts\activate  
-Install dependencies:
+### Prérequis
 
-bash
-Copy code
-pip install -r requirements.txt  
-Install and start a local ChromaDB instance (for vector storage):
+Assurez-vous d'avoir installé les éléments suivants :
 
-bash
-Copy code
-pip install chromadb  
-chromadb --start  
-Install and configure Ollama locally (to support OllamaLLM):
+- [Python 3.8+](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
+- [Git](https://git-scm.com/)
 
-Follow the setup instructions at Ollama.
-🚀 Usage
-Start the Streamlit application:
+### Étapes d'installation
 
-bash
-Copy code
-streamlit run app.py  
-Open your browser and navigate to the URL shown in your terminal (default: http://localhost:8501).
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/votre-utilisateur/assistant-rag-multi-modeles.git
+    cd assistant-rag-multi-modeles
+    ```
 
-Upload Documents: Use the sidebar to upload supported document formats (PDF, TXT, DOCX).
+2. Créez un environnement virtuel (recommandé) :
+    ```bash
+    python -m venv env
+    source env/bin/activate  # Sur Windows, utilisez `env\Scripts\activate`
+    ```
 
-Interact with the Assistant:
+3. Installez les dépendances :
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Select your preferred model (e.g., Llama3.1, Mistral).
-Set the relevance threshold.
-Enter your query in the input box to get context-aware responses.
-🛠 Project Structure
-graphql
-Copy code
-multi-model-rag-assistant/  
-│  
-├── app.py                  # Main Streamlit application  
-├── requirements.txt        # Dependencies  
-├── rag_database/           # Directory for ChromaDB persistent storage  
-└── README.md               # Project documentation  
-⚙ Configuration
-Model Selection: Use the sidebar dropdown to switch between supported models.
-Relevance Threshold: Customize the threshold for document relevance (default: 0.3).
-Conversation History: Automatically stored in session state for coherent follow-ups.
-🔧 Development
-Add New Models
-Add the model name to the model_name dropdown in app.py.
-Ensure the model is properly configured with OllamaLLM or similar APIs.
-Customize Document Loaders
-Modify or extend the load_document function to support additional file formats.
-🤝 Contributions
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+4. Lancez l'application Streamlit :
+    ```bash
+    streamlit run app.py
+    ```
 
-📄 License
-This project is licensed under the MIT License.
+## Utilisation
+
+1. Lancez l'application Streamlit :
+    ```bash
+    streamlit run app.py
+    ```
+
+2. Configurez l'assistant via la barre latérale :
+    - Choisissez le modèle LLM.
+    - Réglez le seuil de pertinence.
+    - Chargez les documents à traiter.
+
+3. Posez vos questions dans la zone de saisie et obtenez des réponses pertinentes basées sur les documents chargés.
+
+## Configuration
+
+- **Modèles supportés** : `llama3.1`, `mistral`, `llama3.2`, `gemma:7b`, `llama2:13b`
+- **Seuil de pertinence** : Ajustable via un slider dans l'interface.
+
+## Structure du projet
+
+- `app.py` : Fichier principal contenant le code de l'application Streamlit.
+- `requirements.txt` : Liste des dépendances Python nécessaires.
+- `rag_database/` : Répertoire pour stocker les données vectorisées.
+
+## Interface Utilisateur
+
+Voici quelques captures d'écran pour illustrer le fonctionnement de l'application :
+
+### Configuration de l'Assistant
+
+![Configuration de l'Assistant](path/to/configuration_screenshot.png)
+
+### Chargement des Documents
+
+![Chargement des Documents](path/to/upload_screenshot.png)
+
+### Interaction avec l'Assistant
+
+![Interaction avec l'Assistant](path/to/chat_screenshot.png)
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Veuillez soumettre une pull request ou ouvrir une issue pour discuter des changements que vous souhaitez apporter.
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
