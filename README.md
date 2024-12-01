@@ -68,13 +68,8 @@ Assurez-vous d'avoir installé les éléments suivants :
 
 Voici quelques captures d'écran pour illustrer le fonctionnement de l'application :
 
-### Configuration de l'Assistant
 
-![Configuration de l'Assistant](path/to/configuration_screenshot.png)
-
-### Chargement des Documents
-
-![Chargement des Documents](path/to/upload_screenshot.png)
+![Chargement des Documents](images/image_1.jpg)
 
 ### Interaction avec l'Assistant
 
