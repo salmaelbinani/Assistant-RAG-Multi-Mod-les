@@ -1,6 +1,6 @@
 # Assistant RAG Multi-Modèles
 
-Ce projet est une application Streamlit pour un assistant de récupération de documents (RAG) multi-modèles utilisant des modèles de langage avancés. L'application permet de charger, traiter et interroger des documents en utilisant différents modèles de langage.
+Ce projet est une application Streamlit pour un assistant de récupération de documents (RAG) multi-modèles utilisant des modèles de langage LLM. L'application permet de charger, traiter et interroger des documents en utilisant différents modèles de langage.
 
 ## Fonctionnalités
 
@@ -41,14 +41,14 @@ Assurez-vous d'avoir installé les éléments suivants :
 
 4. Lancez l'application Streamlit :
     ```bash
-    streamlit run app.py
+    streamlit run code_app.py
     ```
 
 ## Utilisation
 
 1. Lancez l'application Streamlit :
     ```bash
-    streamlit run app.py
+    streamlit run code_app.py
     ```
 
 2. Configurez l'assistant via la barre latérale :
@@ -63,11 +63,6 @@ Assurez-vous d'avoir installé les éléments suivants :
 - **Modèles supportés** : `llama3.1`, `mistral`, `llama3.2`, `gemma:7b`, `llama2:13b`
 - **Seuil de pertinence** : Ajustable via un slider dans l'interface.
 
-## Structure du projet
-
-- `app.py` : Fichier principal contenant le code de l'application Streamlit.
-- `requirements.txt` : Liste des dépendances Python nécessaires.
-- `rag_database/` : Répertoire pour stocker les données vectorisées.
 
 ## Interface Utilisateur
 
